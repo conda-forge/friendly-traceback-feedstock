@@ -19,8 +19,8 @@ requirements:
   host:
     - asttokens
     - pip
-    - pure_eval
     - python >=3.6
+    - stack_data
   run:
     - asttokens >=2.0.4
     - executing >=0.7.0
