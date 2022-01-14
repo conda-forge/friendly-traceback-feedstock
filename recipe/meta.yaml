@@ -31,9 +31,9 @@ test:
     - friendly_traceback
     - friendly_traceback.runtime_errors
     - freindly_traceback.syntax_errors
-   commands:
+  commands:
     - pip list | grep -E '{{ name }}\s+{{ version }}'
-   requires:
+  requires:
     - pip
 
 about:
