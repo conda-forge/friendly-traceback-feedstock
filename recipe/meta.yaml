@@ -17,7 +17,9 @@ build:
 
 requirements:
   host:
+    - asttokens
     - pip
+    - pure_eval
     - python >=3.6
   run:
     - asttokens >=2.0.4
@@ -30,6 +32,11 @@ test:
   imports:
     - friendly_traceback
     - friendly_traceback.runtime_errors
+    - friendly_traceback.syntax_errors
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/friendly-traceback/friendly-traceback
