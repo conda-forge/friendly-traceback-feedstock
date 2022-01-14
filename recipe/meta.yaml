@@ -1,5 +1,5 @@
 {% set name = "friendly-traceback" %}
-{% set version = "0.5.6" %}
+{% set version = "0.5.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/friendly-traceback-{{ version }}.tar.gz
-  sha256: 22e8501c5b9f1380692d82da44defe4957e75decaa7a73fbd0edf4ef84484158
+  sha256: 3746a3de17bbaed7543652ea37dda45298d08ed35eba268ddafefad4791664e7
 
 build:
   number: 0
@@ -17,7 +17,9 @@ build:
 
 requirements:
   host:
+    - asttokens
     - pip
+    - pure_eval
     - python >=3.6
   run:
     - asttokens >=2.0.4
@@ -32,7 +34,7 @@ test:
     - friendly_traceback.runtime_errors
     - friendly_traceback.syntax_errors
   commands:
-    - pip list | grep -E '{{ name }}\s+{{ version }}'
+    - pip check
   requires:
     - pip
 
