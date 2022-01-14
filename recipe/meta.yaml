@@ -1,5 +1,5 @@
 {% set name = "friendly-traceback" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/friendly-traceback-{{ version }}.tar.gz
-  sha256: 03f62b1e94ebcfffbf5e86b7863e03b3005ab174267357e4b9be5dd20a346fe0
+  sha256: e558c2b32ef58b1e5dbc9baf308c2cfcd536048eedef0df6cab3e0b68a9c6586
 
 build:
   number: 0
@@ -30,6 +30,11 @@ test:
   imports:
     - friendly_traceback
     - friendly_traceback.runtime_errors
+    - friendly_traceback.syntax_errors
+  commands:
+    - pip list | grep -E '{{ name }}\s+{{ version }}'
+  requires:
+    - pip
 
 about:
   home: https://github.com/friendly-traceback/friendly-traceback
