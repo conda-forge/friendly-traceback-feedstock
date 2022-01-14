@@ -30,7 +30,7 @@ test:
   imports:
     - friendly_traceback
     - friendly_traceback.runtime_errors
-    - freindly_traceback.syntax_errors
+    - friendly_traceback.syntax_errors
   commands:
     - pip list | grep -E '{{ name }}\s+{{ version }}'
   requires:
