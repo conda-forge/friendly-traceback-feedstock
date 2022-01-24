@@ -17,9 +17,7 @@ build:
 
 requirements:
   host:
-    - executing
     - pip
-    - pure_eval
     - python >=3.6
   run:
     - asttokens >=2.0.4
