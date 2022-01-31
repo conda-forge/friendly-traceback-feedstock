@@ -1,5 +1,5 @@
 {% set name = "friendly-traceback" %}
-{% set version = "0.5.15" %}
+{% set version = "0.5.17" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/friendly-traceback-{{ version }}.tar.gz
-  sha256: 57afa9fd6be1782307531f0fcfe8d638ca6418c693c3565cae1888ce2c29f0b5
+  sha256: 7a05fcf0aa6a927f1f6f34682053b1e0b09256964903a11c4d8cc5aaf7602b1a
 
 build:
   number: 0
