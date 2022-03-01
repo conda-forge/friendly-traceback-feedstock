@@ -17,11 +17,13 @@ build:
 
 requirements:
   host:
+    - executing
     - pip
     - python >=3.6
+    - tomli
   run:
     - asttokens >=2.0.4
-    - executing >=0.7.0
+    - executing >=0.8.3
     - pure_eval >=0.2.1
     - python >=3.6
     - stack_data >=0.1.3
