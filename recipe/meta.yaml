@@ -22,12 +22,12 @@ requirements:
     - python >=3.6
     - tomli
   run:
-    - asttokens >= 2.0.4
-    - executing >= 1.1.0
-    - pure_eval >= 0.2.1
+    - asttokens >=2.0.4
+    - executing >=1.1.0
+    - pure_eval >=0.2.1
     - python >=3.6
-    - six >= 1.16
-    - stack_data >= 0.5.1
+    - six >=1.16
+    - stack_data >=0.5.1
 
 test:
   imports:
@@ -48,4 +48,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - aroberge
     - thewchan
