@@ -27,13 +27,11 @@ requirements:
     - pure_eval >=0.2.1
     - python >=3.6
     - six >=1.16
-    - stack_data >=0.5.1
+    - stack_data >=0.6.2
 
 test:
   imports:
     - friendly_traceback
-    - friendly_traceback.runtime_errors
-    - friendly_traceback.syntax_errors
   commands:
     - pip check
   requires:
