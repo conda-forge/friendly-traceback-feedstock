@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/friendly-traceback-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/friendly-traceback-{{ version }}.tar.gz
   sha256: 8ca149ea4effa114a9d4354078d0252dbc53e291cdcc63f23e34b8fb65ba15f3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,13 +19,14 @@ requirements:
   host:
     - executing
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - tomli
+    - setuptools
   run:
     - asttokens >=2.0.4
     - executing >=1.1.0
     - pure_eval >=0.2.1
-    - python >=3.6
+    - python >={{ python_min }}
     - six >=1.16
     - stack_data >=0.6.2
 
@@ -36,6 +37,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/friendly-traceback/friendly-traceback
