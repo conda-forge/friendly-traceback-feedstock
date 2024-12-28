@@ -21,6 +21,7 @@ requirements:
     - pip
     - python {{ python_min }}
     - tomli
+    - setuptools
   run:
     - asttokens >=2.0.4
     - executing >=1.1.0
